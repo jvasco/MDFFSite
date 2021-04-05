@@ -1,0 +1,22 @@
+.homeleft{
+    display: inline-block;
+    width:25%
+}
+.homecenter{
+    display: inline-block;
+    width:25%
+}
+.homeright{
+    display: inline-block;
+    width:25%
+}
+
+.parent{
+    display: flex;
+    flex-direction:row;
+}
+
+.pic{
+    width:150px;
+    height:150px;
+}

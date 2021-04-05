@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './LeagueHome.css';
 import ac from '../images/ac.gif';
+import ryan from '../images/ryan.jpeg'
+import rick from '../images/rick.jpeg'
 
 class LeagueHome extends Component {
   state = {
@@ -52,25 +54,23 @@ class LeagueHome extends Component {
     return (
 
       <div style={{ 'max-width': '1200px', 'margin-top': "100px" }}>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma" />
-        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-          <div class="w3-quarter">
-            <a href="/history"><img src={ac} alt="AC" style={{ width: "100%" }} /></a>
+        <div id="food">
+          <div className='homeleft'>
+            <a href="/history">
+              <img className='pic' src={ac} alt="AC"/>
+              </a>
             <h3>HISTORY</h3>
-            <p>Find out more about this league of extrodinary gentlemen, and their roots on the banks of the old Raritan</p>
+            <p>More about the Mad Dogs and their roots on the banks of the old Raritan</p>
           </div>
-          <div class="w3-quarter">
-            <img src="/w3images/cherries.jpg" alt="Cherries" style={{ width: "100%" }} />
-            <h3>Cherries, interrupted</h3>
-            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-            <p>What else?</p>
+          <div className='homecenter'>
+            <img className='pic' src={rick} alt="Awards" />
+            <h3>2021 AWARDS</h3>
+            <p>See the awards each of the Mad Dogs valiantly earned over this past season</p>
           </div>
-          <div class="w3-quarter">
-            <img src="/w3images/wine.jpg" alt="Pasta and Wine" style={{ width: "100%" }} />
-            <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+          <div className='homeright'>
+            <img className='pic' src={ryan} alt="Losers" />
+            <h3>HALL OF LOSERS</h3>
+            <p>Gallery of past losers and their punishments</p>
           </div>
         </div>
       </div>

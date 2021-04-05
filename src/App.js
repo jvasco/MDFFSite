@@ -117,19 +117,14 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
         <Navbar />
-        <Route path='/home' component={LeagueHome} />
-        <Route path='/about'/>
-          <header className="App-header">
+        <header className="App-header">
             <img
               src={this.state.pic}
             />
             Welcome, <p>{this.state.username}</p>
-          </header>
-          
-          <div>
-            
-          </div>
-
+        </header>
+        <Route path='/home' component={LeagueHome} />
+        <Route path='/about'/>
           {/* <form onSubmit={this.handleSubmit}>
           <p>
             <strong>Post to Server:</strong>
