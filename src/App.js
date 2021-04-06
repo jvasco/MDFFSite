@@ -45,9 +45,10 @@ class App extends Component {
   changeIsLogged = (isLogged, username, roster, pic) => {
     //in here, get pic and stuff, add othe rprofile info
     sessionStorage.setItem('token', username);
+    sessionStorage.setItem('user', username);
     this.setState({
       isLogged: isLogged,
-      username: username,
+      username: sessionStorage.getItem('token'),
       roster: roster,
       pic: pic
     });
@@ -59,10 +60,11 @@ class App extends Component {
     return tokenString
   }
 
-  Testing = () => {
-    console.log("testing");
-    return 1;
+  getUser = () => { 
+    const user = sessionStorage.getItem('user');
+    return user
   }
+
   handleSubmit = async e => {
     e.preventDefault(); //what
 
@@ -121,7 +123,7 @@ class App extends Component {
             <img
               src={this.state.pic}
             />
-            Welcome, <p>{this.state.username}</p>
+            Welcome, <p>{this.getToken()}</p>
         </header>
         <Route path='/home' component={LeagueHome} />
         <Route path='/about'/>
